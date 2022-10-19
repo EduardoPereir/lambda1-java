@@ -16,13 +16,11 @@ public class Program {
         Product p2 = new Product("Monitor", 240.99);
         Product p3 = new Product("Keyboard", 99.90);
 
-        Comparator<Product> comp = (o1, o2) -> o1.getName().toUpperCase().compareTo(o2.getName().toUpperCase());
-
         list.add(p1);
         list.add(p2);
         list.add(p3);
 
-        list.sort(comp);
+        list.sort((o1, o2) -> o1.getName().toUpperCase().compareTo(o2.getName().toUpperCase()));
 
         for( Product l: list){
         System.out.println(l);
